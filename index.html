@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SHOW ME YOUR FIT!</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <form class="form">
+            <div class="name">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fName" name="fName" autocomplete="off" required><br>
+            </div>
+            <div class="name">
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lName" name="lName" autocomplete="off" required>
+            </div>
+            <div class="age">
+                <label for="age">Age:</label><br>
+                <input type="number" id="Age" name="Age" autocomplete="off" required><br>
+            </div>
+            <div class="gender">
+                <label for="gender">Gender:</label><br>
+                <input type="radio" id="Gender" name="Gender"> Male
+                <input type="radio" id="Gender" name="Gender"> Female
+            </div>
+            <button type="submit" class="btn" button onclick="document.location='test.html'">Click ME</button>
+        </form>
+    </div>
+</body>
+</html>
