@@ -1,0 +1,22 @@
+	<div class = "login">
+		<input type="email" name="Email">
+		<p>Email</p>
+		<input type="password" name="Password">
+		<p>Password</p>
+		<input type="datetime-local" name="local">
+		
+		//css
+		.login {
+	height: 200px;
+	max-width: 500px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+ }
+ .login{
+ 	font-size: 14px;
+ 	text-align: center;
+ }
