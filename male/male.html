@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="container">
-		<header class = "header-image">
+		<header>
 			<h1>MALE WORKOUTS</h1>
 			<p>Hardwork beats talent when talent doesn't work hard</p>
 		</header>
@@ -18,86 +18,75 @@
 				<p>I know you're excited for your tranfsormation, but be patient as you take on this journey of yours.<br> BEST OF LUCK!</p>
 				<hr>
 			</section>
-			<section class ="diet">
-				<h3>DIET</h3>
-				<p>First thing you need is a proper diet, you have to eat more protein while you workout and lessen the calorie intake.</p>
+			<section class ="exercises">
 				<div class="image-container">
-					<img src="pic/skinny MALE.jpg" alt="skinny bodytpe">
-					<img src="pic/normal MALE.jpg" alt="normal bodytype">
-					<img src="pic/big MALE.jpg" alt="big bodytype">
-				</div>
-				<div class="image-container-desc">
-					<hr>
-					<h2>What types of foods are high in protein?</h2>
-					<h4>Lean Meats</h4>
-					<ul>
-						<li>Beef</li>
-						<li>Lamb</li>
-						<li>Veal</li>
-						<li>Pork</li>
-					</ul>
-					<h4>Poultry Meats</h4>
-					<ul>
-						<li>Chicken</li>
-						<li>Turkey</li>
-						<li>Duck</li>
-						<li>Emu</li>
-						<li>Goose</li>
-					</ul>
-					<h4>Fish and Seafoods</h4>
-					<ul>
-						<li>Fish</li>
-						<li>Prawns</li>
-						<li>Crab</li>
-						<li>Lobster</li>
-						<li>Mussels</li>
-					</ul>
-					<h4>Dairy Products</h4>
-					<ul>
-						<li>Milk</li>
-						<li>Yoghurt</li>
-						<li>Cheese</li>
-					</ul>
-					<h4>Nuts and Seeds</h4>
-					<ul>
-						<li>Almonds</li>
-						<li>Pine nuts</li>
-						<li>Walnuts</li>
-						<li>Macadamias</li>
-						<li>Hazelnuts</li>
-						<li>Cashews</li>
-						<li>Pumpkin Seeds</li>
-						<li>Sesame Seeds</li>
-						<li>Sunflower Seeds</li>
-					</ul>
-					<h4>Legumes and Beans</h4>
-					<ul>
-						<li>All beans</li>
-						<li>Lentils</li>
-						<li>Chickpeas</li>
-						<li>Split Feas</li>
-						<li>Tofu</li>
-					</ul>
-					<table>
-						<tr>
-							<th>Age</th>
-							<th>Recommended average daily number of serves of lean meat and poultry, fish, eggs, nuts and seeds, and legumes/beans</th>
-							<th>Recommended average daily number of serves of milk, yoghurt, cheese and/or alternatives (mostly reduced fat)</th>
-						</tr>
-						<tr>
-							<td>Men aged 19-50 years old</td>
-							<td>3</td>
-							<td>2, 1/2</td>
-						</tr>
-						<tr>
-							<td>Men aged 51-70 years old</td>
-							<td>2, 1/2</td>
-							<td>2, 1/2</td>
-						</tr>
-					</table>
+					<img id="lean-body" img src="pics/skinny MALE.jpg" alt="skinny bodytpe" onclick="openPopup()">
+					<img id="bulk-body" img src="pics/normal MALE.jpg" alt="normal bodytype"onclick="openPopup()">
+					<img id="big-body" img src="pics/big MALE.jpg" alt="big bodytype" onclick="openPopup()">
 				</div>
 			</section>
+			<div id="lean">
+				<div id="lean-exercises">
+					<p>This is the popup content.</p>
+					<p>With equipments</p>
+					<p>Without equipments</p>
+					<p>Both</p>
+					<li>
+						<h1>
+						<ul></ul>
+					</li>
+					<button onclick="closePopup()">Close</button>
+				</div>
+			</div>
+			<div id="bulk">
+				<div id="bulk-exercises">
+					<p>This is the popup content.</p>
+					<p>With equipments</p>
+					<p>Without equipments</p>
+					<p>Both</p>
+
+					<button onclick="closePopup()">Close</button>
+				</div>
+			</div>
+			<div id="big">
+				<div id="big-exercises">
+					<p>This is the popup content.</p>
+					<p>With equipments</p>
+					<p>Without equipments</p>
+					<p>Both</p>
+					<button onclick="closePopup()">Close</button>
+				</div>
+			</div>
 		</main>
 	</div>
+	<script>
+        function openPopup() {
+            var modal = document.getElementById("lean");
+            modal.style.display = "block";
+        }
+
+        function closePopup() {
+            var modal = document.getElementById("lean");
+            modal.style.display = "none";
+        }
+		function openPopup() {
+            var modal = document.getElementById("bulk");
+            modal.style.display = "block";
+        }
+
+        function closePopup() {
+            var modal = document.getElementById("bulk");
+            modal.style.display = "none";
+        }
+		function openPopup() {
+            var modal = document.getElementById("big");
+            modal.style.display = "block";
+        }
+
+        function closePopup() {
+            var modal = document.getElementById("big");
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
