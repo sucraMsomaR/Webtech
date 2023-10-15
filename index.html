@@ -8,26 +8,48 @@
 
 <body>
     <div class="box">
+        <h1>Welcome to BODYSHAPERS!</h1>
         <form class="form">
-            <div class="name">
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fName" name="fName" autocomplete="off" required><br>
+            <div class="input-container">
+                <label for="fName">First Name:</label>
+                <input type="text" id="fName" name="fName" required>
             </div>
-            <div class="name">
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lName" name="lName" autocomplete="off" required>
+            <div class="input-container">
+                <label for="lName">Last Name:</label>
+                <input type="text" id="lName" name="lName" required>
             </div>
-            <div class="age">
-                <label for="age">Age:</label><br>
-                <input type="number" id="Age" name="Age" autocomplete="off" required><br>
+            <div class="input-container">
+                <label for="age">Age:</label>
+                <input type="number" id="Age" name="Age" required>
             </div>
-            <div class="gender">
-                <label for="gender">Gender:</label><br>
-                <input type="radio" id="Gender" name="Gender"> Male
-                <input type="radio" id="Gender" name="Gender"> Female
+            <div class="input-container">
+                <label>Gender:</label>
+                <div class="radio-container">
+                    <input type="radio" id="male" name="Gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="Gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
             </div>
-            <button type="submit" class="btn" button onclick="document.location='test.html'">Click ME</button>
+            <button type="button" class="btn" onclick="submitForm()">Submit</button>
         </form>
     </div>
+    <script>
+        function submitForm(){
+            var fName = document.getElementById("fName").value;
+            var lName = document.getElementById("lName").value;
+            var Age = document.getElementById("Age").value;
+            var Gender = document.querySelector('input[name="Gender"]:checked');
+
+            if (fName && lName && Age && Gender) {
+                if (Gender.value === "male") {
+                    window.location.href = "test.html";
+                } else if (Gender.value === "female") {
+                    window.location.href = "test2.html";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
+
